@@ -15,7 +15,9 @@ client.on("ready", (c) => {
 });
 
 client.on("messageCreate", (message) => {
-  if (message.content.includes("https://x.com/")) {
+  if (message.content.includes("https://x.com/i/spaces")) {
+    return;
+  } else if (message.content.includes("https://x.com/")) {
     let newMessage = message.content.replace(
       "https://x.com",
       "https://fixupx.com"
@@ -25,7 +27,9 @@ client.on("messageCreate", (message) => {
 });
 
 client.on("messageCreate", (message) => {
-  if (message.content.includes("https://twitter.com/")) {
+  if (message.content.includes("https://twitter.com/i/spaces")) {
+    return;
+  } else if (message.content.includes("https://twitter.com/")) {
     let newMessage = message.content.replace(
       "https://twitter.com/",
       "https://vxtwitter.com/"
